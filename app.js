@@ -28,7 +28,8 @@ const fromDollarToYen = function(valueInDollar) {
 }
 
 const fromYenToPound = function(valueInYen) {
-    let valueInPound = valueInYen * oneEuroIs.GBP;
+    let valueInEuros = valueInYen / oneEuroIs.JPY;
+    let valueInPound = valueInEuros * oneEuroIs.GBP;
     return valueInPound.toFixed(4);
 }
 
